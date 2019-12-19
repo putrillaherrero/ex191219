@@ -1,0 +1,39 @@
+.contenedorutrherpab {
+    overflow: auto;
+  }
+  #minicontenedor1utrherpab {    
+    margin-left: 4px;
+    /*@include mixinutrherpab(1px, solid, black)*/
+  }
+  #minicontenedor2utrherpab {
+    float: none;
+    width: auto;
+    /*@include mixinutrherpab(2px, solid, black)*/
+  }
+
+ 
+  @media screen and (min-width: 500px) {
+    #minicontenedor1utrherpab {
+      width: 200px;
+      float: left;
+
+    }
+    #minicontenedor2utrherpab {
+      margin-left: 300px;
+    }
+  }
+  
+/*  @mixin mixinutrherpab($anchura, $estilo, $color) {
+    -webkit-border-radio: 3px; 
+    -moz-border-radio: 3px; 
+    -ms-border-radio: 3px;       
+    box-sizing: border-box;
+    border: $anchura $estilo $color;
+    margin-left: 0;
+    
+}
+
+%texto {
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightsalmon;   
+}*/
