@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.contenedorutrherpab {
+  border: 1px black solid;
+  counter-reset: suscripcion;
+}
+.contenedorutrherpab h1 {
+  counter-reset: serie;
+}
+.contenedorutrherpab h2 {
+  counter-reset: actor;
+}
+.contenedorutrherpab h1::before {
+  counter-increment: suscripcion;
+  content: "Suscripción " counter(suscripcion) ". ";
+}
+.contenedorutrherpab h2::before {
+  counter-increment: serie;
+  content: counter(suscripcion) "." counter(serie) " ";
+}
+.contenedorutrherpab h3::before {
+  counter-increment: actor;
+  content: counter(suscripcion) "." counter(serie) "." counter(actor) " ";
+  color: royalblue;
+}
+
+.contenedorflex1utrherpab {
+  display: flex;
+  background-color: royalblue;
+  padding: 10px;
+  min-height: 200px;
+}
+.contenedorflex1utrherpab > .elemento1utrherpab {
+  /*No hereda la propiedad flex de su contenedor.*/
+  min-height: 200px;
+  width: 50%;
+  display: flex;
+  background-color: gainsboro;
+  padding: 5px;
+  border: 1px black solid;
+  align-items: center;
+  justify-content: center;
+}
+.contenedorflex1utrherpab > .elemento1utrherpab > .elemento11utrherpab {
+  min-height: 200px;
+  width: 33%;
+  padding: 3px;
+  border: 1px solid lightcoral;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=utrherpabhojaestilos_ej1utrherpab.css.map */

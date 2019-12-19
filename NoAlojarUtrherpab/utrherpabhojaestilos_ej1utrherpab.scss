@@ -1,0 +1,51 @@
+.contenedorutrherpab {
+    border: 1px black solid;
+    counter-reset: suscripcion;
+    h1 {
+        counter-reset: serie;
+    }
+    h2 {
+        counter-reset: actor;
+    }
+    h1::before {
+        counter-increment: suscripcion;
+        content: "Suscripción " counter(suscripcion) ". ";
+    }
+    h2::before {
+        counter-increment: serie;
+        content: counter(suscripcion)"."counter(serie) " ";
+    }
+    h3::before {
+        counter-increment: actor;
+        content: counter(suscripcion)"."counter(serie)"."counter(actor) " ";
+        color: royalblue;
+    }   
+}
+
+.contenedorflex1utrherpab {
+    display: flex;
+    background-color: royalblue;
+    padding: 10px;
+    min-height: 200px;
+
+    > .elemento1utrherpab {
+        /*No hereda la propiedad flex de su contenedor.*/
+        min-height: 200px;
+        width: 50%;
+        display: flex;
+        background-color: gainsboro;
+        padding: 5px;
+        border: 1px black solid;
+        align-items: center;
+        justify-content: center;
+
+        > .elemento11utrherpab {
+            min-height: 200px;
+            width: 33px / 100px * 100%;
+            padding: 3px;
+            border: 1px solid lightcoral;
+            box-sizing: border-box;
+            
+        }       
+    }  
+}
